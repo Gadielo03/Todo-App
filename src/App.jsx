@@ -53,7 +53,7 @@ function App() {
             <span className="text-myblue p-2 text-justify pt-3 font-semibold font-mono px-5 ">Description</span>
             <textarea type="text" placeholder='Insert Task' className='border border-solid  rounded-lg p-2 m-2 text-myblue h-24 font-mono bg-transparent' />
             </div>
-            <button className='bg-myblue text-white p-2 rounded-lg m-4 hover:bg-myfucia hover:animate-pulse h-10 w-24' type="submit">Agregar</button>
+            <button className='bg-myblue text-white  mb-3 mr-2 p-2 rounded-lg  hover:bg-myfucia hover:animate-pulse h-10 w-24' type="submit">Add</button>
           </form>
         </div>
         {RenderTasks({Tasks})}
