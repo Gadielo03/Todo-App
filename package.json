@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gitname.Gadielo03.io/Todo-app",
+  "homepage": "https://Gadielo03.io/Todo-app",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
