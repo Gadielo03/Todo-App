@@ -8,10 +8,16 @@ function App() {
   const [Tasks, setTasks] = useState(InitialTasks)
 
   const handleSubmit = (event) => {
-    if(event.target[0].value === '' || event.target[1].value === ''){
+    const eventTitle = event.target[0].value
+    const eventDescription = event.target[1].value
+    if(eventTitle === '' || eventDescription === ''){
       alert('Pls fill the inputs')
       return
-    }else{
+    }else if(isRepeated(eventTitle,eventDescription)){
+      alert('Task already exists')
+      return
+    }
+    else{
     event.preventDefault();
     Tasks.push({
       id: new Date().getTime(),
@@ -23,6 +29,12 @@ function App() {
     //console.log(Tasks)
   }
   }
+
+  const isRepeated = (title,description) => {
+    const repeated = Tasks.filter((task) => task.title === title && task.description === description)
+    return repeated.length > 0 ? true : false 
+  }
+
 
   const RenderTasks = ({Tasks}) => {
       return (
